@@ -34,7 +34,7 @@ export function useWindowSize() {
 
 export function useBackButton() {
     const navigate = useNavigate();
-    const [isBack, setIsBack] = useState(false);
+    // const [isBack, setIsBack] = useState(false);
     const handleEvent = () => {
         navigate('/')
         // window.scrollTo(0,0)

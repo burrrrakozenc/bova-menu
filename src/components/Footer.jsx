@@ -38,6 +38,7 @@ const Footer = () => {
                                 style={{width: '90%', height: '400px'}}
                                 allowFullScreen="" loading="lazy"
                                 aria-label="maps-location"
+                                title="maps-location"
                                 referrerPolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
