@@ -1,4 +1,4 @@
-import Menu from './Menu'
+// import Menu from './Menu'
 import './App.css';
 import {Route, Routes} from "react-router";
 import IndexPage from "./pages/Index";
@@ -11,8 +11,8 @@ function App() {
             {/*<header className="App-header">*/}
             <BrowserRouter>
                 <Routes>
-                    <Route path="/bova-menu" element={<RedirectTo/>}/>
-                    {/*<Route path="/bova-menu/menu" element={<Menu/>}/>*/}
+                    <Route path="/bova-menu" element={<IndexPage/>}/>
+                    <Route path="/bova-menu/menu" element={<RedirectTo/>}/>
                 </Routes>
             </BrowserRouter>
             {/*</header>*/}
