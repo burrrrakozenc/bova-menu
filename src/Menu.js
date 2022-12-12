@@ -2,8 +2,8 @@ import {useState} from 'react';
 import {Document, Page} from 'react-pdf/dist/esm/entry.webpack';
 import './assets/css/menu.css'
 import {useWindowSize} from "./static";
-// import t from  './assets/pdf/BOVA_MENU.pdf'
-// import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
+// import t from  './assets/pdf/bova_menu.pdf'
+import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
 // import  from "react-icons/ai";
 
 const Menu = () => {
@@ -52,16 +52,16 @@ const Menu = () => {
                         ?
 
                         <Document
-                            // file="BOVA_MENU.pdf"
-                            file="./assets/pdf/BOVA_MENU.pdf"
+                            file="bova_menu.pdf"
+                            // file="./assets/pdf/BOVA_MENU.pdf"
                             onLoadSuccess={onDocumentLoadSuccess}
                         >
                             <Page pageNumber={pageNumber}/>
                         </Document>
                         :
                         <Document
-                            file="./assets/pdf/BOVA_MENU_MOBILE.pdf"
-                            // file="BOVA_MENU_MOBILE.pdf"
+                            // file="./assets/pdf/BOVA_MENU_MOBILE.pdf"
+                            file="bova_menu_mobile.pdf"
                             onLoadSuccess={onDocumentLoadSuccess}
                         >
                             <Page pageNumber={pageNumber}/>
