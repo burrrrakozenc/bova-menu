@@ -4,9 +4,8 @@ import './assets/css/menu.css'
 import {useWindowSize} from "./static";
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
-import file1 from '../public/bova_menu.pdf'
-import file2 from '../public/bova_menu_mobile.pdf'
-
+// import file1 from '../public/bova_menu.pdf'
+// import file2 from '../public/bova_menu_mobile.pdf'
 const Menu = () => {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
@@ -53,15 +52,14 @@ const Menu = () => {
                         ?
 
                         <Document
-                            file={file1}
+                            file="bova_menu.pdf"
                             onLoadSuccess={onDocumentLoadSuccess}
                         >
                             <Page pageNumber={pageNumber}/>
                         </Document>
                         :
                         <Document
-                            file={file2}
-                            // file="bova_menu_mobile.pdf"
+                            file="bova_menu_mobile.pdf"
                             onLoadSuccess={onDocumentLoadSuccess}
                         >
                             <Page pageNumber={pageNumber}/>
