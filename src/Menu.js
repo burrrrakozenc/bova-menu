@@ -9,7 +9,6 @@ import file2 from './assets/files/bova_menu_mobile.pdf'
 const Menu = () => {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
-    const [pdfile,setPDF]=useState('');
 
     const onDocumentLoadSuccess = ({numPages}) => {
         setNumPages(numPages);
