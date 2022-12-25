@@ -1,11 +1,14 @@
 import {useState} from 'react';
-import {Document, Page} from 'react-pdf/dist/esm/entry.webpack';
+import {Document, Page,pdfjs } from 'react-pdf/dist/esm/entry.webpack';
 import './assets/css/menu.css'
 import {useWindowSize} from "./static";
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
 import file1 from './assets/files/bova_menu.pdf'
 import file2 from './assets/files/bova_menu_mobile.pdf'
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+
 const Menu = () => {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
