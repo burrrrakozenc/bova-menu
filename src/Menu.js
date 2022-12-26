@@ -3,6 +3,8 @@ import {Document, Page,pdfjs } from 'react-pdf/dist/esm/entry.webpack';
 import './assets/css/menu.css'
 import {useWindowSize} from "./static";
 import 'react-pdf/dist/esm/Page/TextLayer.css';
+import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
+// import file1 from './assets/files/bova_menu.pdf'
 import file2 from './assets/files/qr aralik menu_compressed.pdf'
 
 
@@ -16,7 +18,18 @@ const Menu = () => {
         setNumPages(numPages);
     };
 
+    const goToPrevPage = () =>
+        setPageNumber(pageNumber - 1 <= 1 ? 1 : pageNumber - 1);
+
+    const goToNextPage = () =>
+        setPageNumber(
+            pageNumber + 1 >= numPages ? numPages : pageNumber + 1,
+        );
+
     const sizes = useWindowSize()
+
+    // const pdf1 = URL.createObjectURL("https://github.com/burrrrakozenc/bova-menu/raw/master/public/bova_menu.pdf");
+
 
     return (
         <div className="bg-black">
@@ -28,12 +41,25 @@ const Menu = () => {
                 <h3 className="text-white">
                     MENU
                 </h3>
+                <nav style={{display:'none'}}>
+                    <button onClick={goToPrevPage}>
+                        <AiOutlineArrowLeft/>
+                    </button>
+
+                    <button onClick={goToNextPage}>
+                        <AiOutlineArrowRight/>
+                    </button>
+                    <p className="text-white m-2">
+                        Page {pageNumber} of {numPages}
+                    </p>
+                </nav>
 
                 <div className=" d-flex justify-content-center align-items-center">
                     {sizes.width > 680
                         ?
 
                         <Document
+                            // file="bova_menu.pdf"
                             file={file2}
                             onLoadSuccess={onDocumentLoadSuccess}
                         >
@@ -41,6 +67,7 @@ const Menu = () => {
                         </Document>
                         :
                         <Document
+                            // file="bova_menu_mobile.pdf"
                             file={file2}
                             onLoadSuccess={onDocumentLoadSuccess}
                         >
