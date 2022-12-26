@@ -16,14 +16,6 @@ const Menu = () => {
         setNumPages(numPages);
     };
 
-    const goToPrevPage = () =>
-        setPageNumber(pageNumber - 1 <= 1 ? 1 : pageNumber - 1);
-
-    const goToNextPage = () =>
-        setPageNumber(
-            pageNumber + 1 >= numPages ? numPages : pageNumber + 1,
-        );
-
     const sizes = useWindowSize()
 
     return (
