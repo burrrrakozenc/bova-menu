@@ -4,8 +4,7 @@ import './assets/css/menu.css'
 import {useWindowSize} from "./static";
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
-// import file1 from './assets/files/bova_menu.pdf'
-import file2 from './assets/files/qr aralik menu_compressed.pdf'
+import file2 from './assets/files/qr aralik menu_compressed-2.pdf'
 
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
