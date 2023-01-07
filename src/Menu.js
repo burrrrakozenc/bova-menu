@@ -53,8 +53,10 @@ const Menu = () => {
                     </p>
                 </nav>
                 {pdfjs &&
-                    <div className=" d-flex justify-content-center align-items-center"
-                         style={{maxWidth: '100%', width: '100%'}}>
+                    <div
+                        className=" d-flex justify-content-center align-items-center"
+                         style={{ width: '100%'}}
+                        >
                         {sizes.width > 680
                             ?
 
