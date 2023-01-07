@@ -3,7 +3,9 @@ import './App.css';
 import {Route, Routes} from "react-router";
 import IndexPage from "./pages/Index";
 import {BrowserRouter} from "react-router-dom";
-import Menu from "./Menu";
+import Redirect from "./pages/Redirect";
+// import Menu from "./Menu";
+
 
 function App() {
     return (
@@ -11,7 +13,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<IndexPage/>}/>
-                    <Route path="/menu" element={<Menu/>}/>
+                    <Route path="/menu" element={<Redirect/> }/>
                 </Routes>
             </BrowserRouter>
             {/*</header>*/}
