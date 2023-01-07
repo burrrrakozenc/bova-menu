@@ -58,7 +58,6 @@ const Menu = () => {
                         ?
 
                         <Document
-                            // file="bova_menu.pdf"
                             file={file2}
                             onLoadSuccess={onDocumentLoadSuccess}
                         >
@@ -66,7 +65,6 @@ const Menu = () => {
                         </Document>
                         :
                         <Document
-                            // file="bova_menu_mobile.pdf"
                             file={file2}
                             onLoadSuccess={onDocumentLoadSuccess}
                         >
