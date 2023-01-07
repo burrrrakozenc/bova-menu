@@ -102,4 +102,5 @@ button {
     margin: 0 auto;
     width: 80% !important;
     height: 100% !important;
+    z-index: 9999;
 }
