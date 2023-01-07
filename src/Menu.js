@@ -1,5 +1,6 @@
-import {useState} from 'react';
-import {Document, Page,pdfjs } from 'react-pdf/dist/esm/entry.webpack';
+import React, {useState} from 'react';
+import {Document, Page, pdfjs } from 'react-pdf';
+// import {  } from 'react-pdf';
 import './assets/css/menu.css'
 import {useWindowSize} from "./static";
 // import 'react-pdf/dist/esm/Page/TextLayer.css';
