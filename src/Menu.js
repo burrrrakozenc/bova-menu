@@ -4,7 +4,7 @@ import './assets/css/menu.css'
 import {useWindowSize} from "./static";
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
-import file2 from './assets/files/BOVA_QR_MENU_merged_compressed.pdf'
+import file2 from './assets/files/pdfresizer.com-pdf-resize.pdf'
 
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -53,7 +53,7 @@ const Menu = () => {
                     </p>
                 </nav>
 
-                <div className=" d-flex justify-content-center align-items-center">
+                <div className=" d-flex justify-content-center align-items-center" style={{maxWidth:'100%',width:'100%'}}>
                     {sizes.width > 680
                         ?
 
