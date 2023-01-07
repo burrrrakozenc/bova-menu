@@ -2,7 +2,7 @@ import {useState} from 'react';
 import {Document, Page,pdfjs } from 'react-pdf/dist/esm/entry.webpack';
 import './assets/css/menu.css'
 import {useWindowSize} from "./static";
-import 'react-pdf/dist/esm/Page/TextLayer.css';
+// import 'react-pdf/dist/esm/Page/TextLayer.css';
 import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
 import file2 from './assets/files/pdfresizer.com-pdf-resize.pdf'
 
