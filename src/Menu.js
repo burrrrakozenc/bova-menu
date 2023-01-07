@@ -52,27 +52,28 @@ const Menu = () => {
                         Page {pageNumber} of {numPages}
                     </p>
                 </nav>
+                {pdfjs &&
+                    <div className=" d-flex justify-content-center align-items-center"
+                         style={{maxWidth: '100%', width: '100%'}}>
+                        {sizes.width > 680
+                            ?
 
-                <div className=" d-flex justify-content-center align-items-center" style={{maxWidth:'100%',width:'100%'}}>
-                    {sizes.width > 680
-                        ?
+                            <Document
+                                file={file2}
+                                onLoadSuccess={onDocumentLoadSuccess}
+                            >
+                                <Page pageNumber={pageNumber}/>
+                            </Document>
+                            :
+                            <Document
+                                file={file2}
+                                onLoadSuccess={onDocumentLoadSuccess}
+                            >
+                                <Page pageNumber={pageNumber}/>
+                            </Document>
 
-                        <Document
-                            file={file2}
-                            onLoadSuccess={onDocumentLoadSuccess}
-                        >
-                            <Page pageNumber={pageNumber}/>
-                        </Document>
-                        :
-                        <Document
-                            file={file2}
-                            onLoadSuccess={onDocumentLoadSuccess}
-                        >
-                            <Page pageNumber={pageNumber}/>
-                        </Document>
-
-                    }
-                </div>
+                        }
+                    </div>}
             </div>
         </div>
     );
